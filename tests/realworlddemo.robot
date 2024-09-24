@@ -21,6 +21,6 @@ User Registration And Database Validation
     Close Browser
 
     Connect To Database    pymysql    ${DB_NAME}    ${DB_USER}    ${DB_PASSWORD}    ${DB_HOST}
-    ${result}=    Execute Query    SELECT * FROM users WHERE username = 'newuser'
+    ${result}=    Query    SELECT * FROM users WHERE username = 'newuser'
     Should Not Be Empty    ${result}
     Disconnect From Database
